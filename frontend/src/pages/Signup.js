@@ -1,17 +1,13 @@
 import { useState } from "react"
-import useSignup from '../hooks/useSignup';
+import { useSignup } from "../hooks/useSignup"
 
 const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const { signup, error, isLoading } = useSignup()
-
-  console.log("useSignup hook imported:", { signup, error, isLoading }); // Log the imported values
+  const {signup, error, isLoading} = useSignup()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    console.log("Form submitted with email:", email, "password:", password); // Log the form submission details
 
     await signup(email, password)
   }
