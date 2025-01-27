@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
 
-export const useSignup = () => {
+const useSignup = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
@@ -35,3 +35,5 @@ export const useSignup = () => {
 
   return { signup, isLoading, error }
 }
+
+export default useSignup;
