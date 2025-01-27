@@ -1,5 +1,5 @@
 import { useState } from "react"
-import useSignup from '../../hooks/useSignup';  // Adjust the path accordingly
+import useSignup from '../hooks/useSignup';
 
 const Signup = () => {
   const [email, setEmail] = useState('')
