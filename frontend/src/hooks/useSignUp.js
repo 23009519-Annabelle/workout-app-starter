@@ -6,9 +6,13 @@ const useSignup = () => {
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
 
+  console.log("useSignup hook is being initialized"); // Log to verify hook initialization
+
   const signup = async (email, password) => {
     setIsLoading(true)
     setError(null)
+
+    console.log("Signup function triggered with:", email, password); // Log the signup attempt
 
     const response = await fetch('/api/user/signup', {
       method: 'POST',
@@ -22,16 +26,13 @@ const useSignup = () => {
       setError(json.error)
     }
     if (response.ok) {
-      // save the user to local storage
       localStorage.setItem('user', JSON.stringify(json))
-
-      // update the auth context
       dispatch({type: 'LOGIN', payload: json})
-
-      // update loading state
       setIsLoading(false)
     }
   }
+
+  console.log("Returning from useSignup:", { signup, isLoading, error }); // Log the return values
 
   return { signup, isLoading, error }
 }
