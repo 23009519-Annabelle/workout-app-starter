@@ -4,20 +4,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
+const cors = require('cors')
 
-const cors = require('cors');
 // express app
 const app = express()
 
 // middleware
 app.use(express.json())
-app.use(cors({
-  origin: 'https://workout-app-starter-23009519-frontend.onrender.com', // Frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-  credentials: true, // Enable credentials if using cookies or auth headers
-}));
-
+app.use(cors())
 
 app.use((req, res, next) => {
   console.log(req.path, req.method)
