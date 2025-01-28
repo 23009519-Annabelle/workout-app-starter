@@ -66,5 +66,4 @@ userSchema.statics.login = async function(email, password) {
   return user // Return the user object on successful login
 }
 
-
 module.exports = mongoose.model('User', userSchema)
