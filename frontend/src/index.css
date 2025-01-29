@@ -154,10 +154,11 @@ nav button:hover {
 
 /* Authentication Forms */
 form.signup, form.login {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 30px;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
   background: #FFF;
   border-radius: var(--border-radius);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
 }
