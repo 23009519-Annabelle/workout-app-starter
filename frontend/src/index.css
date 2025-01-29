@@ -128,7 +128,6 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 0;
-  background: var(--primary);
 }
 nav a, nav button {
   margin-left: 15px;
