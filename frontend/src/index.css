@@ -3,14 +3,15 @@
 
 /* Layout */
 :root {
-  --primary: #4CAF50; 
-  --error: #D32F2F;   
-  --bg-color: #FAFAFA; 
-  --text-color: #222;   
-  --secondary-text: #666; 
-  --focus-border: #388E3C; 
-  --border-radius: 8px;  
-  --button-padding: 14px 22px; 
+  --primary: #779977;
+  --secondary: #7799CC;
+  --error: #D32F2F;
+  --bg-color: #F0F8FF;
+  --text-color: #222;
+  --secondary-text: #555;
+  --focus-border: #556B2F;
+  --border-radius: 10px;
+  --button-padding: 14px 22px;
 }
 
 /* General Body Styles */
@@ -26,9 +27,10 @@ body {
 
 /* Header */
 header {
-  background: #FFF;
+  background: var(--secondary);
   padding: 20px 0;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 3px solid var(--primary);
+  color: white;
 }
 header .container {
   max-width: 1200px;
@@ -39,10 +41,10 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: var(--text-color);
+  color: white;
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 header a:hover {
   text-decoration: underline;
@@ -68,7 +70,7 @@ header a:hover {
   border-radius: var(--border-radius);
   margin: 20px auto;
   padding: 20px;
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -100,7 +102,7 @@ input {
 input:focus {
   border-color: var(--focus-border);
   outline: none;
-  box-shadow: 0 0 6px rgba(56, 142, 60, 0.5);
+  box-shadow: 0 0 6px rgba(119, 153, 119, 0.5);
 }
 input.error {
   border-color: var(--error);
@@ -109,7 +111,7 @@ input.error {
 form button {
   background: var(--primary);
   border: none;
-  color: #FFF;
+  color: white;
   padding: var(--button-padding);
   font-family: "Poppins";
   border-radius: var(--border-radius);
@@ -118,7 +120,7 @@ form button {
   transition: background-color 0.3s ease;
 }
 form button:hover {
-  background: #388E3C;
+  background: var(--secondary);
 }
 
 /* Navbar */
@@ -126,17 +128,18 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 0;
+  background: var(--primary);
 }
 nav a, nav button {
   margin-left: 15px;
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: white;
   text-decoration: none;
 }
 nav button {
   background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: white;
+  border: 2px solid white;
   padding: 8px 15px;
   border-radius: var(--border-radius);
   font-family: "Poppins";
@@ -145,8 +148,8 @@ nav button {
   transition: background-color 0.3s ease;
 }
 nav button:hover {
-  background: var(--primary);
-  color: #FFF;
+  background: white;
+  color: var(--primary);
 }
 
 /* Authentication Forms */
