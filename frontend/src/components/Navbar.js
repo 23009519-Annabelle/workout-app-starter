@@ -18,13 +18,13 @@ const Navbar = () => {
         </Link>
         <nav>
           {user && (
-            <div className="user-info">
+            <div>
               <span>{user.email}</span>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}
           {!user && (
-            <div className="auth-links">
+            <div>
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
             </div>
